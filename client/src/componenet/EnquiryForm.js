@@ -16,8 +16,8 @@ function EnqueryForm() {
   // const [department, setdepartment] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = { name, emailaddress, phonenumber , address:{city , state , pincode } ,qualification:{ highest, interest , priorcomputerknowledge}};
-    fetch("https://localhost:8080/api/v1/enquiry", {
+    const data = { name , phonenumber , emailaddress, address:{city , state , pincode } ,qualification:{ highest, interest , priorcomputerknowledge}};
+    fetch("http://localhost:8080/api/v1/enquiry", {
       method: "post",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
