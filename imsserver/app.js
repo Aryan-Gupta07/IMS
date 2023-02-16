@@ -3,7 +3,10 @@ const connectDb = require('./database/connect')
 require("dotenv").config()
 const enquiry = require('./Routes/enquiry')
 const app = express()
-
+const cors=require("cors")
+app.use(cors({
+    origin: "*"
+}));
 
 app.get('/', function(req, res){
     // console.log("this is res", res)
