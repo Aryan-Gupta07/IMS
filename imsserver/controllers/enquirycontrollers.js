@@ -2,9 +2,10 @@ const EnquirySchema = require('../modal/modal')
 
 
 
-const getEnquiries = (req,res)=>{
-    console.log("enquiries are here")
-    res.end("ye lo data enquiry")
+const getEnquiries = async (req,res)=>{
+    console.log(req.body)
+    const enquiry = await EnquirySchema.find(req.body);
+    res.status(201).json({enquiry})
 }
 
 const postEnquiries = async (req,res)=>{
