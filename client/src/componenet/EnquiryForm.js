@@ -1,8 +1,7 @@
 import { Box,Button, Stack,Paper,TextField,FormControl,FormLabel,RadioGroup,FormControlLabel,Radio, MenuItem} from '@mui/material'
 import { useState } from 'react';
-function EnqueryForm() {
 
-  
+function EnquiryForm() {
   const [name, setName] = useState("");
   const [emailaddress, setEmail] = useState("");
   const [phonenumber, setPhone] = useState();
@@ -32,7 +31,6 @@ function EnqueryForm() {
   // value={email}
   // onChange={(event) => setEmail(event.target.value)
 
-
   return (
   <div className="form" >
 
@@ -42,11 +40,9 @@ function EnqueryForm() {
     <h3>Personal information</h3>
     <Stack spacing={2} direction = 'row'>
   
-      <TextField label = "Name" variant="outlined"  value={name} onChange={(event)=>setName(event.target.value)}/>
-      <TextField label = "Phone" variant="outlined" value={phonenumber} onChange={(event)=>setPhone(event.target.value)} />
-      <TextField label = "email" variant="outlined"  value={emailaddress} onChange={(event)=>setEmail(event.target.value)} />
-
-
+      <TextField label = "Name" variant="outlined"/>
+      <TextField label = "Phone" variant="outlined"/>
+      <TextField label = "email" variant="outlined"/>
 
     </Stack>
 
@@ -110,8 +106,8 @@ function EnqueryForm() {
                 label = "select country" 
                 select 
                 fullWidth
-                // value = {country}
-                // onChange = {handleChange}
+                value = {country}
+                onChange = {handleChange}
                 >
 
                 <MenuItem value = "Cyber security" >Cyber Security</MenuItem>
@@ -135,4 +131,4 @@ function EnqueryForm() {
     
   );
 }
-export default EnqueryForm
+export default EnquiryForm
