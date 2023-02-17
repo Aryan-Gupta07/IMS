@@ -1,8 +1,7 @@
 import { Box,Button, Stack,Paper,TextField,FormControl,FormLabel,RadioGroup,FormControlLabel,Radio, MenuItem} from '@mui/material'
 import { useState } from 'react';
-function EnqueryForm() {
 
-  
+function EnquiryForm() {
   const [name, setName] = useState("");
   const [emailaddress, setEmail] = useState("");
   const [phonenumber, setPhone] = useState();
@@ -31,13 +30,6 @@ function EnqueryForm() {
 
   // value={email}
   // onChange={(event) => setEmail(event.target.value)
-
-
-
-
-
-
-
 
   return (
   <div className="form" >
