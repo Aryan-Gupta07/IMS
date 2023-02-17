@@ -40,9 +40,9 @@ function EnquiryForm() {
     <h3>Personal information</h3>
     <Stack spacing={2} direction = 'row'>
   
-      <TextField label = "Name" variant="outlined"/>
-      <TextField label = "Phone" variant="outlined"/>
-      <TextField label = "email" variant="outlined"/>
+      <TextField label = "Name" variant="outlined" value={name} onChange={(event)=>setName(event.target.value)}/>
+      <TextField label = "Phone" variant="outlined" value={phonenumber} onChange={(event)=>setPhone(event.target.value)}/>
+      <TextField label = "email" variant="outlined" value={emailaddress} onChange={(event)=>setEmail(event.target.value)}/>
 
     </Stack>
 
@@ -106,8 +106,8 @@ function EnquiryForm() {
                 label = "select country" 
                 select 
                 fullWidth
-                value = {country}
-                onChange = {handleChange}
+                // value = {country}
+                // onChange = {handleChange}
                 >
 
                 <MenuItem value = "Cyber security" >Cyber Security</MenuItem>
