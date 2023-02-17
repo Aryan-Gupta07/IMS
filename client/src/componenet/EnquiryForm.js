@@ -1,6 +1,12 @@
 import { Box,Button, Stack,Paper,TextField,FormControl,FormLabel,RadioGroup,FormControlLabel,Radio, MenuItem} from '@mui/material'
 
 function EnquiryForm() {
+
+
+
+
+
+
   return (
   <div className="form">
 
@@ -13,8 +19,6 @@ function EnquiryForm() {
       <TextField label = "Name" variant="outlined"/>
       <TextField label = "Phone" variant="outlined"/>
       <TextField label = "email" variant="outlined"/>
-
-
 
     </Stack>
 
@@ -76,8 +80,8 @@ function EnquiryForm() {
                 label = "select country" 
                 select 
                 fullWidth
-                // value = {country}
-                // onChange = {handleChange}
+                value = {country}
+                onChange = {handleChange}
                 >
 
                 <MenuItem value = "Cyber security" >Cyber Security</MenuItem>
@@ -101,4 +105,4 @@ function EnquiryForm() {
     
   );
 }
-export default EnqueryForm
+export default EnquiryForm
